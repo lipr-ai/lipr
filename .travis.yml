@@ -4,6 +4,7 @@ compiler: clang
 env:
   global:
     - PATH=/usr/local/opt/qt:${PATH}
+    - HOMEBREW_NO_AUTO_UPDATE=1
 install:
   - brew install qt opencv
 script:
