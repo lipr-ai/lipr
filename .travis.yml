@@ -1,6 +1,9 @@
 language: cpp
 os: osx
 compiler: clang
+env:
+  global:
+    - PATH=/usr/local/opt/qt:${PATH}
 install:
   - brew install qt opencv
 script:
