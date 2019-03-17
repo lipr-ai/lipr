@@ -1,0 +1,7 @@
+language: cpp
+os: osx
+install:
+  - brew install qt opencv
+script:
+  - qmake lipr.pro
+  - make
