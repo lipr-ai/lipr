@@ -1,9 +1,9 @@
 install:
+  - dir C:\Qt\5.12.1
   - set QT_DIR=C:\Qt\5.12.1\msvc2015_64
   - '%QTDIR%\bin\qtenv2.bat'
 build_script:
   - echo %PATH%
-  - dir C:\Qt\5.12.1
   - dir %QT_DIR%
   - dir %QT_DIR%\bin
   - dir C:\MinGW
