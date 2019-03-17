@@ -5,7 +5,6 @@ env:
   global:
     - QT_DIR=/usr/local/opt/qt
     - PATH=$QT_DIR/bin:$PATH
-    - HOMEBREW_NO_AUTO_UPDATE=1
 install:
   - brew install qt opencv
 script:
