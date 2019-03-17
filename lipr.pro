@@ -32,6 +32,14 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 HEADERS += \
     Engine.h
 
-INCLUDEPATH += /usr/local/opt/opencv/include/opencv4
+mac {
+    OPENCV_PATH = /usr/local/opt/opencv
+}
 
-LIBS += -L/usr/local/opt/opencv/lib -lopencv_core -lopencv_imgcodecs -lopencv_imgproc -lopencv_objdetect -lopencv_highgui
+win {
+    OPENCV_PATH = C:/tools/opencv/build
+}
+
+INCLUDEPATH += $$OPENCV_PATH/include/opencv4
+
+LIBS += -L$$OPENCV_PATH/lib -lopencv_core -lopencv_imgcodecs -lopencv_imgproc -lopencv_objdetect -lopencv_highgui
