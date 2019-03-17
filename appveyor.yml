@@ -1,3 +1,5 @@
 build_script:
+  - dir C:\
+  - dir C:\Qt
   - qmake lipr.pro
   - mingw32-make
