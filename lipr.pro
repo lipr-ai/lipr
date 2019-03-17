@@ -42,7 +42,5 @@ mac {
 win32 {
     OPENCV_PATH = "C:/tools/opencv/build"
     INCLUDEPATH += $$OPENCV_PATH/include
-    LIBS += -L$$OPENCV_PATH/x64/vc14/lib \
-            -lopencv_world401
-
+    LIBS += $$OPENCV_PATH/x64/vc14/bin/opencv_world401.dll
 }
