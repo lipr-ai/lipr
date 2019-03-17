@@ -35,26 +35,17 @@ HEADERS += \
 mac {
     OPENCV_PATH = /usr/local/opt/opencv
 	message("mac build")
-}
-
-win {
-    OPENCV_PATH = "C:/tools/opencv/build"
-	message("win build")
+    INCLUDEPATH += $$OPENCV_PATH/include/opencv4
 }
 
 win32 {
     OPENCV_PATH = "C:/tools/opencv/build"
 	message("win32 build")
-}
-
-win64 {
-    OPENCV_PATH = "C:/tools/opencv/build"
-	message("win64 build")
+    INCLUDEPATH += $$OPENCV_PATH/include
 }
 
 message("OPENCV_PATH:")
 message($$OPENCV_PATH)
 
-INCLUDEPATH += $$OPENCV_PATH/include/opencv4
 
 LIBS += -L$$OPENCV_PATH/lib -lopencv_core -lopencv_imgcodecs -lopencv_imgproc -lopencv_objdetect -lopencv_highgui
