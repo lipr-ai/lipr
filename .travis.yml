@@ -3,10 +3,12 @@ os: osx
 compiler: clang
 env:
   global:
-    - PATH=/usr/local/opt/qt:${PATH}
+    - QT_DIR=/usr/local/opt/qt
+    - PATH=$QT_DIR/bin:$PATH
     - HOMEBREW_NO_AUTO_UPDATE=1
 install:
   - brew install qt opencv
 script:
+  - echo $PATH
   - qmake lipr.pro
   - make
