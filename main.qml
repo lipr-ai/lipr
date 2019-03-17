@@ -8,8 +8,8 @@ import ai.lipr 1.0
 
 Window {
     visible: true
-    width: 640
-    height: 480
+    width: 1280
+    height: 720
     title: qsTr("LipR")
 
     Engine {
@@ -28,10 +28,7 @@ Window {
     }
 
     VideoOutput {
-        id: viewfinder
-
-        anchors.fill: parent
-
+        id: preview
         source: camera
         autoOrientation: true
     }
@@ -41,6 +38,19 @@ Window {
 
         onClicked: {
             camera.imageCapture.captureToLocation(engine.imagePath)
+        }
+    }
+
+    Repeater {
+        model: engine.rects
+
+        delegate: Rectangle {
+            x: preview.x + preview.width * modelData.x
+            y: preview.y + preview.height * modelData.y
+            width: preview.width * modelData.width
+            height: preview.height * modelData.height
+            border.color: "red"
+            color: "transparent"
         }
     }
 }
