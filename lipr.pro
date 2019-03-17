@@ -42,12 +42,11 @@ mac {
 win32 {
     OPENCV_PATH = "C:/tools/opencv/build"
     INCLUDEPATH += $$OPENCV_PATH/include
+	LIBS += $$OPENCV_PATH/x64/vc14/bin/opencv_world401.dll
 
     contains(QT_ARCH, i386) {
         message("32-bit")
-		LIBS += $$OPENCV_PATH/x32/vc14/bin/opencv_world401.dll
     } else {
         message("64-bit")
-		LIBS += $$OPENCV_PATH/x64/vc14/bin/opencv_world401.dll
     }
 }
