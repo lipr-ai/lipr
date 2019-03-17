@@ -1,5 +1,6 @@
 language: cpp
 os: osx
+compiler: clang
 install:
   - brew install qt opencv
 script:
