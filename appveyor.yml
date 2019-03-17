@@ -1,0 +1,3 @@
+build_script:
+  - qmake lipr.pro
+  - mingw32-make
