@@ -8,10 +8,5 @@ env:
 install:
   - brew install qt opencv
 script:
-  - echo $PATH
   - qmake lipr.pro
-  - ls -l /usr/local/opt
-  - ls -l /usr/local/opt/opencv
-  - ls -l /usr/local/opt/opencv/include
-  - ls -l /usr/local/opt/opencv/include/opencv4
   - make
