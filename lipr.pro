@@ -42,6 +42,16 @@ win {
 	message("win build")
 }
 
+win32 {
+    OPENCV_PATH = "C:/tools/opencv/build"
+	message("win32 build")
+}
+
+win64 {
+    OPENCV_PATH = "C:/tools/opencv/build"
+	message("win64 build")
+}
+
 message("OPENCV_PATH:")
 message($$OPENCV_PATH)
 
