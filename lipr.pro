@@ -34,11 +34,15 @@ HEADERS += \
 
 mac {
     OPENCV_PATH = /usr/local/opt/opencv
+	message(mac)
 }
 
 win {
     OPENCV_PATH = C:/tools/opencv/build
+	message(win)
 }
+
+message($$OPENCV_PATH)
 
 INCLUDEPATH += $$OPENCV_PATH/include/opencv4
 

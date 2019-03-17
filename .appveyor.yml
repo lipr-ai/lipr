@@ -36,6 +36,10 @@ install:
   - if not %QTDIR:msvc=%==%QTDIR% %make% /? > nul
   - set BIN=mini-qml
   - choco install -y opencv
+  - dir C:\
+  - dir C:\tools
+  - dir C:\tools\opencv
+  - dir C:\tools\opencv\build
 
 before_build:
   # Prepare the out-of-source build directory.
