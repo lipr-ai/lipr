@@ -1,0 +1,12 @@
+language: cpp
+os: osx
+compiler: clang
+env:
+  global:
+    - QT_DIR=/usr/local/opt/qt
+    - PATH=$QT_DIR/bin:$PATH
+install:
+  - brew install qt opencv
+script:
+  - qmake lipr.pro
+  - make
